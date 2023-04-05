@@ -79,6 +79,12 @@ PRODUCT_PACKAGES += \
     RoundQSOverlay \
     PermissionControllerOverlay
 
+ifeq ($(TARGET_DISABLES_GMS), true)
+# Overlay (Vanilla build)
+PRODUCT_PACKAGES += \
+    VanillaFrameworksOverlay
+endif
+
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/aospa/overlay/static
 PRODUCT_PACKAGE_OVERLAYS += vendor/aospa/overlay/static
 
