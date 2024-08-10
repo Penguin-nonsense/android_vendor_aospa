@@ -275,10 +275,6 @@ PRODUCT_PACKAGES += \
     update_verifier \
     update_engine_sideload
 
-# Volume panel dialog - SystemUI
-PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    sys.fflag.override.settings_volume_panel_in_systemui=true
-
 # WiFi
 PRODUCT_PACKAGES += \
     libwpa_client
