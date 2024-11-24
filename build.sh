@@ -257,8 +257,8 @@ elif [ "${KEY_MAPPINGS}" ]; then
     if [ "$FLAG_IMG_ZIP" = 'y' ]; then
         echo -e "${CLR_BLD_BLU}Generating signed fastboot package${CLR_RST}"
         img_from_target_files \
-            PenguinOS-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip \
-            PenguinOS-$AOSPA_VERSION-image.zip
+	PenguinOS-$AOSPA_VERSION-signed-target_files-$FILE_NAME_TAG.zip \
+        PenguinOS-$AOSPA_VERSION-image.zip
 	IMG_SIZE=$(ls -nl "$OTA_FILE" | awk '{print $5}')
         IMG_SHA256=$(sha256sum "$OTA_FILE" | awk '{print $1}')
 	UTCSTAMP=$(grep 'ro.build.date.utc=' "$OUT"/system/build.prop | sed 's/^.*=//')
@@ -297,7 +297,13 @@ else
     checkExit
 
     cp -f $OUT/aospa_$DEVICE-ota-$FILE_NAME_TAG.zip $OUT/PenguinOS-$AOSPA_VERSION.zip
-    echo "OTA zip Complete: $OUT/PenguinOS-$AOSPA_VERSION.zip"
+    IMG_SIZE=$(ls -nl "$OUT/PenguinOS-$AOSPA_VERSION.zip" | awk '{print $5}')
+    IMG_SHA256=$(sha256sum "$OUT/PenguinOS-$AOSPA_VERSION.zip" | awk '{print $1}')
+    UTCSTAMP=$(grep 'ro.build.date.utc=' "$OUT"/system/build.prop | sed 's/^.*=//')
+    echo "${CLR_BLD_GRN}OTA zip Complete:${CLR_RST} $OUT/PenguinOS-$AOSPA_VERSION.zip"
+    echo "${CLR_BLD_GRN}SIZE:${CLR_RST} $IMG_SIZE bytes"
+    echo "${CLR_BLD_GRN}SHA256:${CLR_RST} $IMG_SHA256"
+    echo "${CLR_BLD_GRN}BUILD STAMP:${CLR_RST} $UTCSTAMP"
 fi
 echo -e ""
 
