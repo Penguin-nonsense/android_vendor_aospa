@@ -4,6 +4,5 @@
 export BUILD_USERNAME=nobody
 export BUILD_HOSTNAME=android-build
 
-echo "Building with ThinLTO."
-export GLOBAL_THINLTO=true
+#echo "Building with ThinLTO."
 export USE_THINLTO_CACHE=true
