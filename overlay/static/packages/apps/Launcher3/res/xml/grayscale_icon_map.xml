@@ -480,6 +480,9 @@
         drawable="@drawable/themed_icon_paypal"
         package="com.paypal.android.p2pmobile" />
     <icon
+        drawable="@drawable/themed_icon_oos_photos"
+        package="com.coloros.gallery3d" />
+    <icon
         drawable="@drawable/themed_icon_photos"
         package="com.google.android.apps.photos" />
     <icon
