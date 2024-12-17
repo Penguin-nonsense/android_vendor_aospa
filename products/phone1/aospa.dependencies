@@ -50,8 +50,8 @@
         "clone-depth":  "1"
     },
     {
-        "remote":       "blobs-gitlab",
-        "repository":   "proprietary_vendor_nothing_firmware",
+        "remote":       "gitlab",
+        "repository":   "xenxynon/proprietary_vendor_nothing_firmware",
         "target_path":  "vendor/nothing/firmware",
         "revision":     "uvite",
         "clone-depth":  "1"
