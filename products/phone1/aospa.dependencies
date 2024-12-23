@@ -33,7 +33,7 @@
         "remote":       "github",
         "repository":   "xenxynon/android_kernel_nothing_sm7325",
         "target_path":  "kernel/msm-5.4",
-        "revision":     "ksu-nxt",
+        "revision":     "ksu",
         "clone-depth":  "1"
     },
     {
