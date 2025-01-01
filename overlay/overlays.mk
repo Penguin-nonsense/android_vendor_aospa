@@ -25,7 +25,6 @@ PRODUCT_PACKAGES += \
     AOSPASystemUIOverlay \
     BrightnessSliderFilledOverlay \
     BrightnessSliderThinOverlay \
-    CertifiedPropsOverlay \
     FontGoogleSansOverlay \
     FontHarmonySansOverlay \
     FontInterOverlay \
